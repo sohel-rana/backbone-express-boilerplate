@@ -1,9 +1,6 @@
 {
   "name": "backbone-express-boilerplate",
   "version": "1.0.0",
-  "description": "boiler plate project for node, express and backbone",
-  "author": "Md Sohel Rana",
-  "license": "MIT",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -15,5 +12,25 @@
     "morgan": "~1.5.1",
     "jade": "~1.9.2",
     "serve-favicon": "~2.2.0"
-  }
+  },
+
+  "description": "Boilerplate project for node, express and backbone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sohel-rana/backbone-express-boilerplate.git"
+  },
+  "keywords": [
+    "backbone",
+    "express",
+    "requirejs",
+    "node",
+    "boilerplate",
+    "Backbone Express Boilerplate"
+  ],
+  "author": "Sohel Rana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sohel-rana/backbone-express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/sohel-rana/backbone-express-boilerplate"
 }
