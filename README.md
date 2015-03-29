@@ -17,6 +17,6 @@ In order to use this boilerplate, please follow these steps
  3. npm install
  
  
- To run the app do  <b>npm start</b>
+To run the app do  <b>npm start</b>
  
 
