@@ -1,0 +1,18 @@
+{
+  "name": "backbone-express-boilerplate",
+  "version": "1.0.0",
+  "description": "boiler plate project for node, express and backbone",
+  "author": "Md Sohel Rana",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "body-parser": "~1.12.0",
+    "cookie-parser": "~1.3.4",
+    "debug": "~2.1.1",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0"
+  }
+}

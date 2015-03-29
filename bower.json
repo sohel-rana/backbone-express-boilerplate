@@ -1,0 +1,17 @@
+{
+  "name": "backbone-express-boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "Md Sohel Rana <sohel023010@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "backbone": "~1.1.0",
+    "underscore": "~1.8.2",
+    "requirejs": "~2.1.10",
+    "requirejs-text": "~2.0.10",
+    "bootstrap": "~3.3.4"
+  }
+}
