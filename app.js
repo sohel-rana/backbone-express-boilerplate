@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var errors = require('./components/errors');
+
 
 var app = express();
 
@@ -20,12 +20,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// All undefined asset or api routes should return a 404
-app.route('/:url(api|auth|components|app|bower_components|assets)/*')
-  .get(errors[404]);
 
-// All other routes should redirect to the index.html
-app.route('/*')
+//loading index.html for root
+//you can use the jade file for application starter
+app.route('/')
   .get(function(req, res) {
     res.sendFile(path.join(__dirname, 'public') + '/index.html');
   });
@@ -37,29 +35,14 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+
 // error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
-    error: {}
+    error: err
   });
 });
-
 
 module.exports = app;

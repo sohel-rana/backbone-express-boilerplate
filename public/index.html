@@ -7,8 +7,30 @@
   <title></title>
 </head>
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">BackboneJS-Express Boilerplate</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </nav>
   <div class="container-fluid">
-     hello
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar" id="sidebar">
+        <ul class="nav nav-sidebar">
+          <li><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="page-content"></div>
+    </div>
   </div>
+  <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>
