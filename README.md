@@ -17,6 +17,11 @@ In order to use this boilerplate, please follow these steps
  3. npm install
  
  
-To run the app do  <b>npm start</b> and visit <b>http://localhost:3000</b>
+To run the app do  
+```
+npm start 
+and visit http://localhost:3000
+```
+
  
 
