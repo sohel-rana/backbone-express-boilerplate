@@ -20,8 +20,11 @@ In order to use this boilerplate, please follow these steps
 To run the app do  
 ```
 npm start 
-and visit http://localhost:3000
 ```
 
+Now visit the following url in your browser,
+```
+http://localhost:3000
+```
  
 
