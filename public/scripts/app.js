@@ -31,7 +31,6 @@ define([
      */
     Backbone.View.prototype.close = function () {
       this.$el.children().remove();
-      this.unbind();
       this.undelegateEvents();
       this.stopListening();
     };

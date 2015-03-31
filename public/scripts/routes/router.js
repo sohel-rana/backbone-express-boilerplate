@@ -34,7 +34,6 @@ define([
       if (isRender) {
         this.currentView.render();
       }
-
     },
 
     home: function(){

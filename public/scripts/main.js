@@ -4,6 +4,8 @@
 var app = {};
 
 require.config({
+
+  //set the paths
   paths: {
     template: '../templates',
     text:  '../bower_components/requirejs-text/text',
@@ -13,16 +15,16 @@ require.config({
     Router: 'routes/router'
   },
 
+  //define the dependencies
   shim: {
     'backbone': ['underscore', 'jquery'],
-    'AdminApp': ['backbone']
-
+    'App': ['backbone']
   }
 });
 
 
 require([
-  'AdminApp'
-], function(AdminApp) {
-  AdminApp.initialize();
+  'App'
+], function(App) {
+  App.initialize();
 });
