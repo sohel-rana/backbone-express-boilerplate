@@ -1,3 +1,26 @@
 <div class="row">
-  <h2>This is dashboard.</h2>
+  <h2 class="page-header">Dashboard</h2>
+  <table class="table table-striped table-bordered">
+    <caption class="text-primary">USERS</caption>
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% _.each(users, function (user){%>
+    <tr>
+      <td><%=user.firstname%></td>
+      <td><%=user.lastname%></td>
+      <td><%=user.email%></td>
+      <td><%=user.city%></td>
+      <td><%=user.country%></td>
+    </tr>
+    <%})%>
+    </tbody>
+  </table>
 </div>

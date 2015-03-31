@@ -22,10 +22,11 @@ define([
     events: {},
 
     initialize: function () {
+      this.collection.on('reset', this.render, this);
     },
 
     render: function () {
-      this.$el.html(this.template());
+      this.$el.html(this.template({users: this.collection.toJSON()}));
     }
   });
   return DashboardView;

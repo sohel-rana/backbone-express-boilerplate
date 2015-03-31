@@ -4,10 +4,11 @@
 
 
 define([
+  'collections/user',
   'views/home',
   'views/dashboard',
   'views/contact'
-], function (HomeView, DashboardView, ContactView) {
+], function (UserCollection, HomeView, DashboardView, ContactView) {
   'use strict';
 
   var AdminRouter = Backbone.Router.extend({
@@ -15,9 +16,9 @@ define([
     currentView: null,
 
     routes: {
-      "home" :          "home",         // #home
-      "dashboard" :     "dashboard",    // #dashboard
-      "contact" :       "contact"       // #contact
+      "home":          "home",         // #home
+      "dashboard":     "dashboard",    // #dashboard
+      "contact":       "contact"       // #contact
     },
 
     /**
@@ -41,7 +42,9 @@ define([
     },
 
     dashboard: function() {
-      this.changeView(new DashboardView(), true);
+      var userCollection = new UserCollection();
+      this.changeView(new DashboardView({collection: userCollection}), true);
+      userCollection.fetch({reset: true});
     },
 
     contact: function() {
