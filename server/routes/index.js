@@ -8,7 +8,7 @@ module.exports = function (app) {
   //you can use the index.jade file as default
   app.route('/')
     .get(function(req, res) {
-      res.sendFile(path.join(__dirname, 'public') + '/index.html');
+      res.sendFile(path.join(path.normalize(__dirname + '/../'),'client') + '/index.html');
     });
 
   // catch 404 and forward to error handler

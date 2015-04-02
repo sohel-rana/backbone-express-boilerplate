@@ -1,5 +1,5 @@
 node_modules
-public/bower_components
+client/bower_components
 npm-debug.log
 .idea
 .DS_Store
