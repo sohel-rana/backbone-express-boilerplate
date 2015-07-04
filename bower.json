@@ -7,11 +7,11 @@
   "license": "MIT",
   "homepage": "index.html",
   "dependencies": {
-    "jquery": "~2.1.0",
-    "backbone": "~1.1.0",
-    "underscore": "~1.8.2",
-    "requirejs": "~2.1.10",
-    "requirejs-text": "~2.0.10",
-    "bootstrap": "~3.3.4"
+    "jquery": "latest",
+    "backbone": "latest",
+    "underscore": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "bootstrap": "latest"
   }
 }
