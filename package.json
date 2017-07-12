@@ -10,7 +10,7 @@
     "cookie-parser": "latest",
     "debug": "latest",
     "morgan": "latest",
-    "jade": "latest",
+    "pug": "latest",
     "serve-favicon": "latest"
   },
 
