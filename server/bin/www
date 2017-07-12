@@ -5,14 +5,24 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('backbone-express-boilerplate:server');
+var debug = require('debug')('backbone-express-boilerplate:app');
 var http = require('http');
+var https = require('https');
+var fs = require('fs');
+
+
+
+var options = {
+  key: fs.readFileSync('privatekey.key'),
+  cert: fs.readFileSync('certificate.crt')
+};
+
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
 /**
@@ -28,6 +38,27 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+
+/**
+ * Get https port from environment and store in Express.
+ */
+var httpsPort = normalizePort(process.env.PORT || '3000');
+app.set('httpsPort', port);
+
+/**
+ * create https server
+ */
+var httpsServer = https.createServer(options,app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+httpsServer.listen(httpsPort);
+httpsServer.on('error', onError);
+httpsServer.on('listening', onListening);
+
 
 /**
  * Normalize a port into a number, string, or false.
