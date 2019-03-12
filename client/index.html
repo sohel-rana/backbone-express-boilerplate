@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
-  <title></title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <title></title>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">BackboneJS-Express Boilerplate</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right">
-          <input type="text" class="form-control" placeholder="Search...">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">BackboneJS-Express Boilerplate</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="navbar-collapse collapse float-right">
+        <ul></ul>
+        <form class="form-inline my-auto ml-auto">
+            <input type="search" class="form-control" placeholder="Search...">
         </form>
-      </div>
     </div>
-  </nav>
-  <div class="container-fluid">
+</nav>
+<div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar" id="sidebar">
-        <ul class="nav nav-sidebar">
-          <li><a href="#home">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#dashboard">Dashboard</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="page-content"></div>
+        <div class="col-sm-3 col-md-2 sidebar" id="sidebar">
+            <ul class="nav flex-column nav-sidebar">
+                <li><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main" id="page-content"></div>
     </div>
-  </div>
-  <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+</div>
+<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>
