@@ -2,7 +2,8 @@
   "name": "backbone-express-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./server/bin/www"
+    "start": "node ./server/bin/www",
+    "test": "mocha"
   },
   "dependencies": {
     "express": "latest",
@@ -12,6 +13,10 @@
     "morgan": "latest",
     "pug": "latest",
     "serve-favicon": "latest"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "supertest": "^6.3.3"
   },
 
   "description": "Boilerplate project for node, express and backbone",
