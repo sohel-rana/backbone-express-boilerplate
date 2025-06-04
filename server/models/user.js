@@ -25,7 +25,7 @@ module.exports = function () {
         lastname: 'Hayden',
         email: 'mathew.hayden@gmail.com',
         city: 'Perth',
-        country: 'Autralia'
+        country: 'Australia'
       }, {
         firstname: 'Bill',
         lastname: 'Cosby',
